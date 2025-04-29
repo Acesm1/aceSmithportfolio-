@@ -12,9 +12,9 @@
 
 body {
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
-    background-image: url("Ace.png");
+    background-image: url("Ace.jpg");
     background-color: var(--bg);
     color: var(--text);
     font-family: 'Segoe UI', Consolas, monospace;
