@@ -11,10 +11,10 @@
 }
 
 body {
+    background-image: url("./Ace.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
-    background-image: url("Ace.jpg");
     background-color: var(--bg);
     color: var(--text);
     font-family: 'Segoe UI', Consolas, monospace;
@@ -69,6 +69,6 @@ footer {
     padding-top: 20px;
 }
 
-img{
+ace {
     bored-radius: 50%;
 }
