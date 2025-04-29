@@ -11,6 +11,7 @@
 }
 
 body {
+    background-image: url("Ace.png");
     background-color: var(--bg);
     color: var(--text);
     font-family: 'Segoe UI', Consolas, monospace;
