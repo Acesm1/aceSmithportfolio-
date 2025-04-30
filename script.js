@@ -45,8 +45,8 @@ function typewriter(element, text, speed) {
 
 // Example usage:
 const h2Element = document.getElementById('myH2'); // Get the h2 element by its ID
-const textToType = "This is the text for the typewriter effect.";
-const typingSpeed = 50; // milliseconds per character
+const textToType = "Featured Project: Information Disclosure Scanner";
+const typingSpeed = 80; // milliseconds per character
 
 typewriter(h2Element, textToType, typingSpeed);
   
