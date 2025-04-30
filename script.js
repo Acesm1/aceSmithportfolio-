@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   typeWriter("Cybersecurity Portfolio — ace-Smith001", "typewriter");
 
 function typeWrter(text, elementId, delay = 75) {
-  const el = document.getElementById(elementId);
+  const el = document.getElementById(typewrter);
   let i = 0;
   function type() {
     if (i < text.length) {
