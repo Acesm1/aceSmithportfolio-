@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, speed);
   }
   }
-      const textElement = document.getElementById("myText");
+      const textElement = document.getElementById("text");
     const textToType = "Featured Project: Information Disclosure Scanner";
     const typingSpeed = 200; // Adjust as needed
     typeWriter(textElement, textToType, typingSpeed);
