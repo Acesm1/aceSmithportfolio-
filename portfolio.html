@@ -9,7 +9,8 @@
     <script defer src="script.js"></script>
 
 </head>
-<body><img src="Ace.png" width="150" height="200" id="ace" >
+<body onload="typeWriter()">
+    <img src="Ace.png" width="150" height="200" id="ace" >
 
     <h1 id="typewriter" >ace-Smith001 — Cybersecurity Portfolio</h1>
 
@@ -23,7 +24,20 @@
     </div>
 
     <div class="section fade-in">
-        <h2 id= "myText" >Featured Project: Information Disclosure Scanner</h2>
+        <h2 id= "text" ></h2>
+        <script>
+var text = "This is the text that will be typed.";
+var index = 0;
+var speed = 100; // milliseconds between each character
+
+function typeWriter() {
+  if (index < text.length) {
+    document.getElementById("text").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, speed);
+  }
+}
+        </script>
         <p>
             A custom-built Python and Java-based scanner that detects information disclosure issues in web applications.
         </p>
