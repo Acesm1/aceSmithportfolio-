@@ -28,7 +28,7 @@ function typeWriter(text, elementId, delay = 75) {
 document.addEventListener("DOMContentLoaded", () => {
   typeWriter("Cybersecurity Portfolio — ace-Smith001", "typewriter");
 
-  function typeWriter(element, text, speed i = 0) {
+function typeWriter(element, text, speed i = 0) {
   if (i < text.length) {
     element.innerHTML += text.charAt(i);
     i++;
