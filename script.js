@@ -27,6 +27,28 @@ function typeWriter(text, elementId, delay = 75) {
 }
 document.addEventListener("DOMContentLoaded", () => {
   typeWriter("Cybersecurity Portfolio — ace-Smith001", "typewriter");
+
+
+function typewriter(element, text, speed) {
+  let i = 0;
+  element.textContent = ''; // Clear existing text
+
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    }
+  }
+  type();
+}
+
+// Example usage:
+const h2Element = document.getElementById('myH2'); // Get the h2 element by its ID
+const textToType = "This is the text for the typewriter effect.";
+const typingSpeed = 50; // milliseconds per character
+
+typewriter(h2Element, textToType, typingSpeed);
   
   // Auto-year
   const year = document.getElementById("year");
