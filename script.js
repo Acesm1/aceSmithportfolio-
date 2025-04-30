@@ -27,7 +27,7 @@ function typeWriter(text, elementId, delay = 75) {
 }
 document.addEventListener("DOMContentLoaded", () => {
   typeWriter("Cybersecurity Portfolio — ace-Smith001", "typewriter");
-;
+  
   // Auto-year
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
