@@ -28,6 +28,20 @@ function typeWriter(text, elementId, delay = 75) {
 document.addEventListener("DOMContentLoaded", () => {
   typeWriter("Cybersecurity Portfolio — ace-Smith001", "typewriter");
   
+ function typeWriter(element, text, speed, i = 0) {
+  if ( i < text.length) {
+    element.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(function() {
+      typeWriter(element, text, speed, i);
+    }, speed);
+  }
+  }
+      const textElement = document.getElementById("myText");
+    const textToType = "Featured Project: Information Disclosure Scanner";
+    const typingSpeed = 30; // Adjust as needed
+    typeWriter(textElement, textToType, typingSpeed);
+  
   // Auto-year
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
