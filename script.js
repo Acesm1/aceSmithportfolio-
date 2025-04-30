@@ -49,6 +49,28 @@ const textToType = "Featured Project: Information Disclosure Scanner"
 const typingSpeed = 50; // milliseconds per character
 
 typewriter(h2Element, textToType, typingSpeed);
+
+
+function typewriter(element, text, speed) {
+  let i = 0;
+  element.textContent = ''; // Clear existing text
+
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    }
+  }
+  type();
+}
+
+// Example usage:
+const hcElement = document.getElementById('myH3'); // Get the h2 element by its ID
+const textToType = "I'm a cybersecurity enthusiast with a passion for ethical hacking, automation, and web application security. I build tools that help identify vulnerabilities in real-world systems, focusing on OWASP Top 10 risks, information disclosure, and secure coding practices.";
+const typingSpeed = 50; // milliseconds per character
+
+typewriter(hcElement, textToType, typingSpeed);
   
   // Auto-year
   const year = document.getElementById("year");
