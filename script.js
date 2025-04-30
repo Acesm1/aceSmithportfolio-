@@ -39,7 +39,7 @@ function typeWriter(element, text, speed i = 0) {
   }
       const textElement = document.getElementById("text");
     const textToType = "Featured Project: Information Disclosure Scanner";
-    const typingSpeed = 200; // Adjust as needed
+    const typingSpeed = 50; // Adjust as needed
     typeWriter(textElement, textToType, typingSpeed);
   
   // Auto-year
