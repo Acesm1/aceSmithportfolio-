@@ -28,6 +28,21 @@ function typeWriter(text, elementId, delay = 75) {
 document.addEventListener("DOMContentLoaded", () => {
   typeWriter("Cybersecurity Portfolio — ace-Smith001", "typewriter");
 
+function typeWrter(text, elementId, delay = 75) {
+  const el = document.getElementById(elementId);
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      el.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, delay);
+    }
+  }
+  el.innerHTML = "";
+  type();
+}
+document.addEventListener("DOMContentLoaded", () => {
+  typeWrter("Featured Project: Information Disclosure Scanner", "typewrter");
   // Auto-year
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
