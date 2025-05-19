@@ -49,6 +49,28 @@ const textToType = "Featured Project: Information Disclosure Scanner";
 const typingSpeed = 80; // milliseconds per character
 
 typewriter(h2Element, textToType, typingSpeed);
+
+
+function typewriter(element, text, speed) {
+  let i = 0;
+  element.textContent = ''; // Clear existing text
+
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    }
+  }
+  type();
+}
+
+// Example usage:
+const h2Element = document.getElementById('myH3'); // Get the h2 element by its ID
+const textToType = "Featured Project: File Disclosure Scanner (jar)";
+const typingSpeed = 80; // milliseconds per character
+
+typewriter(h2Element, textToType, typingSpeed);
   
   // Auto-year
   const year = document.getElementById("year");
