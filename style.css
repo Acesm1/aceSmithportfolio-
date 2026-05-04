@@ -145,3 +145,27 @@ footer {
     margin: 12px 0;
     font-size: 1.1rem;
 }
+/* Glitch Effect for Typewriter */
+.glitch-text {
+    animation: glitch-skew 0.25s linear infinite;
+}
+
+@keyframes glitch-skew {
+    0%   { transform: skew(0deg); }
+    20%  { transform: skew(8deg); }
+    40%  { transform: skew(-6deg); }
+    60%  { transform: skew(4deg); }
+    80%  { transform: skew(-3deg); }
+    100% { transform: skew(0deg); }
+}
+
+/* Blinking Cursor */
+#typewriter::after {
+    content: '█';
+    animation: blink 0.8s step-end infinite;
+    color: var(--accent);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
