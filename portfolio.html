@@ -2,125 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ace-Smith001 — Cybersecurity Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ace-Smith001 | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style1.css">
     <link rel="icon" type="image/x-icon" href="Ace.png">
     <script defer src="script.js"></script>
-
 </head>
 <body>
-    <img src="Ace.png" width="150" height="200" id="ace" >
+    <!-- Background Image Shuffle -->
+    <div id="bg-shuffle"></div>
 
-    <h1 id="typewriter" >ace-Smith001 — Cybersecurity Portfolio</h1>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">ace-Smith001</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">HTB</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <div class="section fade-in">
-        <h2>About Me</h2>
-        <p>
-            I'm a cybersecurity enthusiast with a passion for ethical hacking, automation, and web application security.
-            I build tools that help identify vulnerabilities in real-world systems, focusing on OWASP Top 10 risks,
-            information disclosure, and secure coding practices.
-        </p>
-    </div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="Ace.png" alt="ace-Smith" class="avatar glitch">
+            <h1 id="typewriter">ace-Smith001</h1>
+            <p class="subtitle">Cybersecurity Enthusiast • Ethical Hacker • Bug Bounty Hunter</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="https://github.com/Acesm1" target="_blank" class="btn secondary">GitHub</a>
+            </div>
+        </div>
+    </header>
 
-    <div class="section fade-in">
-        <h2 id="myH2" ></h2>
-        <p>
-            A custom-built Python and Java-based scanner that detects information disclosure issues in web applications.
-        </p>
-        <ul>
-            <li>Finds exposed files like <code>.git/</code>, <code>robots.txt</code>, <code>config.php</code></li>
-            <li>Detects IDOR and Broken Access Control issues</li>
-            <li>Analyzes HTML comments, server misconfigs, and debug pages</li>
-            <li>Auto-runs Nmap on leaked IPs and logs results</li>
-        </ul>
-        <p><strong>Tools:</strong> Python, Java, Selenium, BeautifulSoup, Colorama, Nmap</p>
-        <p><strong>Security Focus:</strong> OWASP A01, A02, A06, A09</p>
-        <p><strong>GitHub Link:</strong> <a href="https://github.com/Acesm1/Quick_information_disclosure" target="_blank">View Project</a></p>
-    </div>
-    <br></br>
-    <div class="section fade-in">
-        <h2 id="myH3" >Featured Project: File Disclosure Scanner (jar)</h2>
-        <br></br>
-        <p>Darknickon File Disclosure Scanner is a high-performance, multithreaded Java tool designed to detect and analyze sensitive file exposures across web archives. It leverages the Wayback Machine's CDX API to retrieve historical URLs, filters them based on file extensions indicative of sensitive data (e.g., .sql, .pdf, .docx, .zip), and assesses their accessibility. This tool is invaluable for penetration testers, bug bounty hunters, and security researchers aiming to uncover inadvertent file disclosures and misconfigurations.</p>
-        <p><strong>GitHub Link:</strong> <a href="https://github.com/Acesm1/Unprotected-Files-and-Directories" target="_blank">View Project</a></p>
-    </div>
-    </div>
+    <main class="container">
+        <!-- About -->
+        <section id="about" class="section fade-in">
+            <h2>About Me</h2>
+            <p>I'm a cybersecurity enthusiast with a passion for ethical hacking, automation, and web application security. I build tools that help identify vulnerabilities in real-world systems, focusing on OWASP Top 10 risks, information disclosure, and secure coding practices.</p>
+        </section>
 
-    <div class="section fade-in">
-        <h2>Skills & Tools</h2>
-        <ul>
-            <li>Web Application Security (OWASP Top 10)</li>
-            <li>Bug Bounty Recon & Automation</li>
-            <li>Burp Suite, Nmap, ffuf, gobuster</li>
-            <li>Python, Java, Linux, Git</li>
-            <li>C, C#, C++, C, MySQL </li>
-            <li> SQL injection, command injection, SSRF, CSRF,</li>
-            <li>spyware </li>
+        <!-- Featured Projects -->
+        <section id="projects" class="section fade-in">
+            <h2>Featured Projects</h2>
             
-        </ul>
-    </div>
+            <div class="project-card">
+                <h3>Information Disclosure Scanner</h3>
+                <p>Python + Java scanner that detects exposed files, IDOR, Broken Access Control, and misconfigurations.</p>
+                <a href="https://github.com/Acesm1/Quick_information_disclosure" target="_blank" class="btn small">View Project →</a>
+            </div>
 
-    <div class="section fade-in">
-        <h2>Certifications</h2>
-        <ul>
-            <li>TryHackMe: Pre-Security / Offensive Pentesting (DONE)</li>
-            <li>eJPT (planned)</li>
-            <li>Google cyber security (DONE)</li>
-            <li> Hack the Box CWES (DONE) </li>
-             <li> Hack the Box CPTS (DONE) </li>
-            <li> offsec PEN 200 (in progress ) </li>
-        </ul>
-    </div>
+            <div class="project-card">
+                <h3>Darknickon File Disclosure Scanner (Java)</h3>
+                <p>High-performance multithreaded tool using Wayback Machine CDX API to hunt sensitive files.</p>
+                <a href="https://github.com/Acesm1/Unprotected-Files-and-Directories" target="_blank" class="btn small">View Project →</a>
+            </div>
+        </section>
 
-        <div class="section fade-in">
-        <h2>HackTheBox Achievements (Pwned Machines)</h2>
-        <p>Proud owner of these HTB boxes — user + root flags submitted!</p>
-        <div class="achievements-grid">
-            <a href="https://labs.hackthebox.com/achievement/machine/1958884/796" target="_blank">
-                <img src="https://labs.hackthebox.com/badge/image/796" alt="Giveback Owned" loading="lazy">
-            </a>
-            <a href="https://labs.hackthebox.com/achievement/machine/1958884/754" target="_blank">
-                <img src="https://labs.hackthebox.com/badge/image/754" alt="Machine 754 Owned" loading="lazy">
-            </a>
-            <a href="https://labs.hackthebox.com/achievement/machine/1958884/736" target="_blank">
-                <img src="https://labs.hackthebox.com/badge/image/736" alt="Machine 736 Owned" loading="lazy">
-            </a>
-            <a href="https://labs.hackthebox.com/achievement/machine/1958884/817" target="_blank">
-                <img src="https://labs.hackthebox.com/badge/image/817" alt="Machine 817 Owned" loading="lazy">
-            </a>
-            <a href="https://labs.hackthebox.com/achievement/machine/1958884/814" target="_blank">
-                <img src="https://labs.hackthebox.com/badge/image/814" alt="Machine 814 Owned" loading="lazy">
-            </a>
-            <a href="https://labs.hackthebox.com/achievement/machine/1958884/787" target="_blank">
-                <img src="https://labs.hackthebox.com/badge/image/787" alt="Conversor Owned" loading="lazy">
-            </a>
-            <a href="https://labs.hackthebox.com/achievement/machine/1958884/751" target="_blank">
-                <img src="https://labs.hackthebox.com/badge/image/751" alt="Machine 751 Owned" loading="lazy">
-            </a>
-        </div>
-    </div>
+        <!-- HTB Achievements -->
+        <section id="achievements" class="section fade-in">
+            <h2>HackTheBox Achievements (Pwned Machines)</h2>
+            <p>Proud owner of these HTB boxes — user + root flags submitted!</p>
+            <div class="achievements-grid">
+                <a href="https://labs.hackthebox.com/achievement/machine/1958884/796" target="_blank">
+                    <img src="https://labs.hackthebox.com/badge/image/796" alt="Giveback Owned" loading="lazy">
+                </a>
+                <a href="https://labs.hackthebox.com/achievement/machine/1958884/754" target="_blank">
+                    <img src="https://labs.hackthebox.com/badge/image/754" alt="Machine 754 Owned" loading="lazy">
+                </a>
+                <a href="https://labs.hackthebox.com/achievement/machine/1958884/736" target="_blank">
+                    <img src="https://labs.hackthebox.com/badge/image/736" alt="Machine 736 Owned" loading="lazy">
+                </a>
+                <a href="https://labs.hackthebox.com/achievement/machine/1958884/817" target="_blank">
+                    <img src="https://labs.hackthebox.com/badge/image/817" alt="Machine 817 Owned" loading="lazy">
+                </a>
+                <a href="https://labs.hackthebox.com/achievement/machine/1958884/814" target="_blank">
+                    <img src="https://labs.hackthebox.com/badge/image/814" alt="Machine 814 Owned" loading="lazy">
+                </a>
+                <a href="https://labs.hackthebox.com/achievement/machine/1958884/787" target="_blank">
+                    <img src="https://labs.hackthebox.com/badge/image/787" alt="Conversor Owned" loading="lazy">
+                </a>
+                <a href="https://labs.hackthebox.com/achievement/machine/1958884/751" target="_blank">
+                    <img src="https://labs.hackthebox.com/badge/image/751" alt="Machine 751 Owned" loading="lazy">
+                </a>
+            </div>
+        </section>
 
-    <div class="section fade-in">
-        <h2>Contact</h2>
-        <ul>
-            <li>GitHub: <a href="https://github.com/Acesm1">github.com/ace-Smith001</a></li>
-            <li>Email: <a href="mailto:danielobioha77@gmail.com">danielobioha77@gmail.com</li></a>
-            <li>LinkedIn: <a href="https://ng.linkedin.com/in/daniel-obioha-23241832a" target="_blank" >Daniel Obioha’s profile on LinkedIn</a></li>
-        </ul>
-    </div>
+        <!-- Skills -->
+        <section class="section fade-in">
+            <h2>Skills & Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Web App Pentesting</div>
+                <div class="skill-item">OWASP Top 10</div>
+                <div class="skill-item">Python & Java</div>
+                <div class="skill-item">Burp Suite</div>
+                <div class="skill-item">Nmap • ffuf • Gobuster</div>
+                <div class="skill-item">Automation & Scripting</div>
+            </div>
+        </section>
 
-    <div class="section fade-in">
-        <h2>Quote</h2>
-        <div class="code-block fade-in">
-            “Hacking is not about breaking things. It’s about understanding how they work — and making them better.”
-        </div>
-    </div>
+        <!-- Contact -->
+        <section id="contact" class="section fade-in">
+            <h2>Get In Touch</h2>
+            <ul class="contact-list">
+                <li>GitHub: <a href="https://github.com/Acesm1" target="_blank">Acesm1</a></li>
+                <li>Email: <a href="mailto:danielobioha77@gmail.com">danielobioha77@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://ng.linkedin.com/in/daniel-obioha-23241832a" target="_blank">Daniel Obioha</a></li>
+            </ul>
+        </section>
+    </main>
 
-</body>
     <footer>
-    &copy; <span id="year"></span> ace-Smith001.
+        &copy; <span id="year"></span> ace-Smith001 • Built with neon &amp; caffeine
     </footer>
-    <a href="./portfolio.html"><button id="toTop" title="Back to top">↑</button></a>
+
+    <button id="toTop" title="Back to top">↑</button>
+</body>
 </html>
