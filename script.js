@@ -85,3 +85,63 @@ typewriter(h2Element, textToType, typingSpeed);
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+// Background Image Shuffle (Anime style)
+const bgImages = ['Ace.png', 'Ace.png', /* add more anime/cyber images you have */];
+let currentBg = 0;
+
+function changeBackground() {
+    const bg = document.getElementById('bg-shuffle');
+    bg.style.backgroundImage = `url('${bgImages[currentBg]}')`;
+    currentBg = (currentBg + 1) % bgImages.length;
+}
+
+setInterval(changeBackground, 7000);
+changeBackground();
+
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Typewriter for hero
+function typewriter(element, text, speed = 80) {
+    let i = 0;
+    element.textContent = '';
+    function type() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
+}
+
+// Intersection Observer for fade-ins
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Scroll to top
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+    toTop.style.display = window.scrollY > 500 ? 'block' : 'none';
+});
+
+toTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Auto year
+document.getElementById('year').textContent = new Date().getFullYear();
