@@ -1,4 +1,104 @@
-// script.js
+// ==================== COOL TYPEWRITER + EFFECTS ====================
+
+// Background Image Shuffle
+const bgImages = [
+    'Ace.png',
+    // Add more images here later for better shuffle
+];
+
+let currentBg = 0;
+function changeBackground() {
+    const bg = document.getElementById('bg-shuffle');
+    if (bg) {
+        bg.style.backgroundImage = `url('${bgImages[currentBg]}')`;
+        currentBg = (currentBg + 1) % bgImages.length;
+    }
+}
+
+// Advanced Typewriter Effect
+function coolTypewriter(elementId, text, speed = 60, callback) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+
+    let i = 0;
+    el.textContent = '';
+
+    function type() {
+        if (i < text.length) {
+            el.textContent += text.charAt(i);
+            i++;
+
+            // Random glitch effect on some characters
+            if (Math.random() > 0.85) {
+                el.classList.add('glitch-text');
+                setTimeout(() => el.classList.remove('glitch-text'), 80);
+            }
+
+            setTimeout(type, speed + Math.random() * 30); // Natural variation
+        } else if (callback) {
+            callback();
+        }
+    }
+    type();
+}
+
+// Main initialization
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Background shuffle
+    if (bgImages.length > 0) {
+        changeBackground();
+        setInterval(changeBackground, 8000);
+    }
+
+    // Cool Typewriter for Hero Title
+    const heroTitle = document.getElementById('typewriter');
+    if (heroTitle) {
+        coolTypewriter('typewriter', "Cybersecurity Portfolio — ace-Smith001", 70);
+    }
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Intersection Observer for Fade-in
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Scroll to Top Button
+    const toTop = document.getElementById('toTop');
+    window.addEventListener("scroll", () => {
+        if (toTop) {
+            toTop.style.display = window.scrollY > 400 ? "block" : "none";
+        }
+    });
+
+    if (toTop) {
+        toTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+    // Auto Year
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+});// script.js
 
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(link => {
